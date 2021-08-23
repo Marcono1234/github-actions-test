@@ -1,3 +1,3 @@
-# github-actions-test
+# github-actions-test2
 Testing GitHub actions
 
