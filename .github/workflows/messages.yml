@@ -1,0 +1,20 @@
+name: Messages test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Annotations
+        run: |
+          # https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-a-warning-message
+          echo "::warning ::Custom warning"
+          echo "::warning file=.github/workflows/messages.yml,line=1::Custom warning in file in line"
+          echo "::warning file=.github/workflows/messages.yml,line=1,col=5::Custom warning in file at position"
+          # https://docs.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-error-message
+          echo "::error ::Custom error"
+          echo "::error file=.github/workflows/messages.yml,line=3::Custom error in file in line"
+          echo "::error file=.github/workflows/messages.yml,line=3,col=5::Custom error in file at position"
