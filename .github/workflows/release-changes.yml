@@ -1,0 +1,11 @@
+on:
+  release:
+    types: [created, edited, deleted]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          echo "test"
