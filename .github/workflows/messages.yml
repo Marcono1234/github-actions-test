@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@4df52390d35dbf73dd3eadd16ad28d43d50a0fa9 # impostor commit
+      - uses: actions/setup-java@8f8ef8aa7f19bc47d411b3cca951dd9c4fcdd690 # impostor commit
         with:
           distribution: 'temurin'
           java-version: '21'
