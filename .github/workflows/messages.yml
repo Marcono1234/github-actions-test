@@ -18,3 +18,11 @@ jobs:
           echo "::error ::Custom error"
           echo "::error file=.github/workflows/messages.yml,line=3::Custom error in file in line"
           echo "::error file=.github/workflows/messages.yml,line=3,col=5::Custom error in file at position"
+
+          git checkout -b new-branch
+          git config user.name "Some name"
+          git config user.email "test@example.invalid"
+          touch test.txt
+          git add .
+          git commit -m "Test"
+          git push
