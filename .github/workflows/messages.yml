@@ -25,4 +25,4 @@ jobs:
           touch test.txt
           git add .
           git commit -m "Test"
-          git push --set-upstream origin
+          git push --set-upstream origin new-branch
