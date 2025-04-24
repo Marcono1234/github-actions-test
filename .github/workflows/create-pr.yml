@@ -14,13 +14,13 @@ jobs:
     steps:
       - uses: GitHubSecurityLab/actions-permissions/monitor@v1
       # outdated action
-      - uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871
+      - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9
   
       - name: Make change
         run: touch test.txt
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Test commit
           title: Test PR
