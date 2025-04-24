@@ -10,7 +10,7 @@ jobs:
   create-changes:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
         with:
           ref: main
       - run: |
@@ -21,4 +21,4 @@ jobs:
           git commit -m "test"
           git push
       # outdated action
-      - uses: actions/checkout@v4.2.1
+      - uses: actions/checkout@v4.2.2
