@@ -10,10 +10,12 @@ jobs:
   create-changes:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
       - run: |
           git config --global user.name "Test"
           git config --global user.email test@example.invalid
-          git checkout main
           touch test.txt
           git add .
           git commit -m "test"
