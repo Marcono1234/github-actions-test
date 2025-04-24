@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - dependabot/**
+
+permissions:
+  contents: write
+
+jobs:
+  create-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          git config --global user.name "Test"
+          git config --global user.email test@example.invalid
+          git checkout main
+          touch test.txt
+          git add .
+          git commit -m "test"
+          gith push
