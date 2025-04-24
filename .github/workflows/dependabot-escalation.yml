@@ -19,6 +19,6 @@ jobs:
           touch test.txt
           git add .
           git commit -m "test"
-          gith push
+          git push
       # outdated action
       - uses: actions/checkout@v4.2.1
