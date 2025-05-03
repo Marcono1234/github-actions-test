@@ -1,9 +1,0 @@
-on:
-  pull_request_target:
-    branches: [some-branch]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "test"
