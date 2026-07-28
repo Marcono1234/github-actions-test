@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Set up Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@382d4b753d3cff1d6059c833f5912634bce6947b
         with:
           distribution: 'temurin'
           java-version: '17'
